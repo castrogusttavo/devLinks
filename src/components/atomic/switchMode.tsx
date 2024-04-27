@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const SwitchMode = () => {
+export function SwitchMode() {
   const [isDarkMode, setIsDarkMode] = useState(false);
 
   const toggleMode = () => {
@@ -31,6 +31,4 @@ const SwitchMode = () => {
       <span className="block w-16 h-6 bg-[#ffffff0d] dark:bg-[#00000005] border border-solid border-[#ffffff80] dark:border-[#00000080] backdrop-blur-sm rounded-full"></span>
     </div> 
   );
-};
-
-export default SwitchMode;
+}

@@ -3,7 +3,7 @@
 /* import { Switch } from "./atomic/switch"; */
 import { Tabs } from "./atomic/tabs";
 import { SocialLinks } from "./socialLinks";
-import SwitchMode from './atomic/switchMode';
+import { SwitchMode } from './atomic/switchMode';
 
 export function Profile() {
   return (
@@ -28,8 +28,8 @@ export function Profile() {
 
       <SocialLinks />
 
-      <footer className="pt-6 px-0 text-center text-sm">
-      Feito com a ♥ <a href="">Rocketseat</a>  
+      <footer className="pt-6 px-0 text-center text-sm text-slate-200 dark:text-slate-700">
+      Todos os direitos reservados. <a href="https://gusttavocastro.mit-license.org/" className="font-medium text-slate-400 dark:text-slate-400">MIT LICENSE</a>  
       </footer>   
     </>
   );

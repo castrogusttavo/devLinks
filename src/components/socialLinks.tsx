@@ -1,40 +1,31 @@
 import { SocialLink } from "./atomic/socialLink";
-import {
-  LogoGithub,
-  LogoInstagram,
-  LogoYoutube,
-  LogoLinkedin,
-} from "react-ionicons";
-import { useState, useEffect } from 'react';
+import { FaGithub, FaInstagram, FaFigma, FaLinkedin } from "react-icons/fa";
+import { IconContext } from "react-icons";
 
 export function SocialLinks() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
-
-  useEffect(() => {
-    setIsDarkMode(document.documentElement.classList.contains("dark"));
-  }, []);
-
-  const iconColor = isDarkMode ? "#000000" : "#FFFFFF";
-
   return (
     <>
-      <div className="flex justify-center py-6 px-0 text-2xl">
-        <SocialLink href="">
-          <LogoGithub color={iconColor} />
-        </SocialLink>
+      <IconContext.Provider
+        value={{ className: "color-[#00000005] dark:color-[ffffff0d]" }}
+      >
+        <div className="flex justify-center py-6 px-0 text-2xl">
+          <SocialLink href="https://github.com/castrogusttavo/" target="_blank">
+            <FaGithub />
+          </SocialLink>
 
-        <SocialLink href="">
-          <LogoInstagram color={iconColor} />
-        </SocialLink>
+          <SocialLink href="https://www.instagram.com/castrogusttavo.dev/" target="_blank">
+            <FaInstagram />
+          </SocialLink>
 
-        <SocialLink href="">
-          <LogoYoutube color={iconColor} />
-        </SocialLink>
+          <SocialLink href="https://www.linkedin.com/in/castrogusttavo/" target="_blank">
+            <FaLinkedin />
+          </SocialLink>
 
-        <SocialLink href="">
-          <LogoLinkedin color={iconColor} />
-        </SocialLink>
-      </div>
+          <SocialLink href="https://www.figma.com/@castrogusttavo" target="_blank">
+            <FaFigma />
+          </SocialLink>
+        </div>
+      </IconContext.Provider>
     </>
   );
 }
